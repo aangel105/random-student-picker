@@ -11,7 +11,7 @@ var students = [
   "Eric",
   "Janette",
   "Desmond",
-  "Ashiya",
+  "Asiya",
   "Monica",
   "Susana",
   "Deborah",
@@ -46,15 +46,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // build the attendance list
   for (let i=0; i<students.length; i++) {
-    let li = document.createElement('li');
-    li.innerText = students[i];
-    aList.append(li);
+    let ul = document.createElement('ul');
+    ul.innerText = students[i];
+    aList.append(ul);
   }
+
+
 });
 
 var pickOnClick = function (event) {
   choice.innerHTML = '&nbsp;'
-  var rand = students[Math.floor(Math.random() * students.length)];
+  var random = Math.floor(Math.random() *  student.length);
+  console.log(random)
+  var item = student[random];
+    student.splice(random, 1);
+      return item
+  var rand = students
+  var removeStudent = []
+  
+  
+
+
   var x = window.setInterval(() => {
     if (colors[cur] === undefined) {
       window.clearInterval(x);
